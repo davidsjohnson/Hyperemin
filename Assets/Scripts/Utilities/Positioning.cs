@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using VRTK;
 
 public class Positioning : MonoBehaviour {
 
@@ -17,11 +18,11 @@ public class Positioning : MonoBehaviour {
     }
 
 
-    public void PositionTheremin(GameObject motionControllers)
+    public void PositionTheremin()
     {
         //1.Get motion controller positions(x, z); we can ignore y for now
-        Transform leftController = motionControllers.transform.Find("LeftController");
-        Transform rightController = motionControllers.transform.Find("RightController");
+        Transform leftController = VRTK_DeviceFinder.GetControllerLeftHand().transform;
+        Transform rightController = VRTK_DeviceFinder.GetControllerRightHand().transform;
 
         if (leftController != null && rightController != null)
         {

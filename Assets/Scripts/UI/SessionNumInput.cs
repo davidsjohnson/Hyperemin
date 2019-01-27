@@ -11,12 +11,12 @@ public class SessionNumInput : MonoBehaviour {
     {
         inputField = GetComponent<InputField>();
         inputField.onEndEdit.AddListener(delegate { OnEndEditHandler(inputField); });
-        PlayerCtrl.Control.SessionNum = null;
+        PlayerCtrlOLD.Control.SessionNum = null;
     }
 
 
     private void OnEndEditHandler(InputField change)
     {
-        PlayerCtrl.Control.SessionNum = change.textComponent.text;
+        PlayerCtrlOLD.Control.SessionNum = change.textComponent.text;
     }
 }

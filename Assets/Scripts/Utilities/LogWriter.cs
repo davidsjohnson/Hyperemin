@@ -32,7 +32,7 @@ public class LogWriter
     public static int id =0;
     public string FilePath { get; private set; }
 
-    private string baseFolder = "C:\\Users\\david\\Documents\\projects\\VRmin-UserStudy\\Logs";
+    private string baseFolder = "C:\\Users\\david\\Documents\\projects\\VRmin_Assets\\HyperLogs";
 
     private object lockObj = new object();
     private Queue<Entry> entries = new Queue<Entry>();

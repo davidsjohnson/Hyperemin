@@ -16,6 +16,6 @@ public class HandednessDropdown : MonoBehaviour
     private void OnValueChangedHandler(Dropdown changed)
     {
         Debug.Log("here: " + (Handedness)changed.value);
-        PlayerCtrl.Control.Handed = (Handedness)changed.value;
+        PlayerCtrlOLD.Control.Handed = (Handedness)changed.value;
     }
 }

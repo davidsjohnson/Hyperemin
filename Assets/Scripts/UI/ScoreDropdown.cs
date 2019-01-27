@@ -16,7 +16,7 @@ public class ScoreDropdown : MonoBehaviour {
 
 	void Start ()
     {
-        scorePath = "C:\\Users\\david\\Documents\\projects\\VRmin-UserStudy\\Scores\\";
+        scorePath = "C:\\Users\\david\\Documents\\projects\\VRmin_Assets\\Scores\\";
 
         // Setup dropdown menu options and change handler
         dropdown = GetComponent<Dropdown>();

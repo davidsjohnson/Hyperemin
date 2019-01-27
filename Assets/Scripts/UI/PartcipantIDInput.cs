@@ -11,13 +11,13 @@ public class PartcipantIDInput : MonoBehaviour {
     {
         inputField = GetComponent<InputField>();
         inputField.onEndEdit.AddListener(delegate { OnEndEditHandler(inputField); });
-        PlayerCtrl.Control.ParticipantID = null;
+        PlayerCtrlOLD.Control.ParticipantID = null;
     }
 
 
     private void OnEndEditHandler(InputField change)
     {
-        PlayerCtrl.Control.ParticipantID = change.textComponent.text;
+        PlayerCtrlOLD.Control.ParticipantID = change.textComponent.text;
     }
  
 }

@@ -12,11 +12,11 @@ public class SceneTypeDropdown : MonoBehaviour {
         dropdown = GetComponent<Dropdown>();
         dropdown.onValueChanged.AddListener(delegate { OnValueChangedHandler(dropdown); });
 
-        PlayerCtrl.Control.SceneType = (SceneType)dropdown.value;
+        PlayerCtrlOLD.Control.SceneType = (SceneType)dropdown.value;
     }
 
     private void OnValueChangedHandler(Dropdown changed)
     {
-        PlayerCtrl.Control.SceneType = (SceneType)changed.value;
+        PlayerCtrlOLD.Control.SceneType = (SceneType)changed.value;
     }
 }

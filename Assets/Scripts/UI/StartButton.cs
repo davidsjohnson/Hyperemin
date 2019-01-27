@@ -21,17 +21,8 @@ public class StartButton : MonoBehaviour {
         if (string.IsNullOrEmpty(PlayerCtrl.Control.MidiInputDeviceName))
             throw new System.ArgumentException("No MIDI device provided");
 
-        if (string.IsNullOrEmpty(PlayerCtrl.Control.SessionNum))
-            throw new System.ArgumentException("No Session # provided");
-
         if (string.IsNullOrEmpty(PlayerCtrl.Control.MidiScoreResource))
             throw new System.ArgumentException("No MIDI score provided");
-
-        if (string.IsNullOrEmpty(PlayerCtrl.Control.ParticipantID))
-            throw new System.ArgumentException("No participant ID provided");
-
-        if (!System.Enum.IsDefined(typeof(SceneType), PlayerCtrl.Control.SceneType))
-            throw new System.ArgumentException("Invalid Training Type selection");
 
         PlayerCtrl.Control.StartVRMin();
 
